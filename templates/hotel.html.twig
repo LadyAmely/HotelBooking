@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezerwacja Hoteli</title>
+    <link rel="stylesheet" href="{{ asset('css/hotel.css') }}">
+</head>
+<body>
+<header>
+    <div class="container">
+        <h1>Hotel & Tour Booking</h1>
+        <nav>
+            <ul>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/hotels">Hotels</a></li>
+                <li><a href="#">Tours</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+</header>
+
+<div class="nav-container">
+    <nav>
+        <ul>
+            <li><a href="#">Stays</a></li>
+            <li><a href="#">Flights</a></li>
+            <li><a href="#">Flight+Hotel</a></li>
+            <li><a href="#">Tourist Attractions</a></li>
+            <li><a href="#">Taxi</a></li>
+        </ul>
+    </nav>
+</div>
+
+
+
+
+<div class="main-container">
+
+
+
+    <div class="search-container">
+        <div class="search-box">
+            <input type="text" id="location" name="location" placeholder="Localization">
+            <input type="date" id="checkin-date" name="checkin-date">
+            <input type="date" id="checkout-date" name="checkout-date">
+            <button type="button" class="search-btn">Search</button>
+        </div>
+    </div>
+
+    <div class="filters">
+        <h2>Filter Hotels</h2>
+        <form id="filter-form">
+            <div class="form-group">
+                <label for="property-type">Type of object:</label>
+                <select id="property-type" name="property-type">
+                    <option value="">All</option>
+                    <option value="apartment">Apartments</option>
+                    <option value="vacation_home">Holiday homes</option>
+                    <option value="hotel">Hotels</option>
+                </select>
+            </div>
+            <button type="submit" class="search-btn">Filter</button>
+        </form>
+    </div>
+
+    <div class="filters">
+        <h2>See hotel standard</h2>
+        <form id="filter-form">
+            <div class="form-group">
+                <label for="property-type">Standard:</label>
+                <select id="property-type" name="property-type">
+                    <option value="1">1 star</option>
+                    <option value="2">2 stars</option>
+                    <option value="3">3 stars</option>
+                    <option value="4">4 stars</option>
+                    <option value="5">5 stars</option>
+                </select>
+            </div>
+            <button type="submit" class="search-btn">Filter</button>
+        </form>
+    </div>
+
+
+</div>
+
+
+
+<main>
+
+        {% for hotel in hotels %}
+            <section class="hotel">
+                <img src="{{ hotel.imgUrl }}" alt="{{ hotel.title }}">
+                    <h2>{{ hotel.title }}</h2>
+                    <p>{{ hotel.description }}</p>
+                <div class="hotel-details">
+                    <button class="reserve-btn">Book now</button>
+                    <h2 class="hotel-price">${{ hotel.price }}</h2>
+                </div>
+
+
+            </section>
+        {% else %}
+            <p>No hotels available.</p>
+        {% endfor %}
+
+
+
+
+
+
+
+
+
+
+
+</main>
+
+
+
+<footer>
+    <div class="container">
+        <div class="footer-info">
+            <h3>Contact Us</h3>
+            <p>Address: 123 Main Street, City, Country</p>
+            <p>Phone: +1 (234) 567-8901</p>
+            <p>Email: support@example.com</p>
+        </div>
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Cancellation Policy</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Hotel & Tour Booking. All rights reserved.</p>
+    </div>
+</footer>
+
+
+</body>
+</html>

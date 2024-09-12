@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+header {
+    background-color: #003366;
+    color: #fff;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    position: relative;
+}
+
+nav ul li a:hover {
+    color: #549ce6;
+    transform: translateY(-2px);
+}
+
+nav ul li a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background-color: #549ce6;
+    transition: width 0.3s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+
+main {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.hotel {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+}
+
+.hotel img {
+    width: 80%;
+    height: 40%;
+    border-radius: 8px;
+}
+
+.hotel h2 {
+    margin: 10px 0;
+}
+
+.hotel p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.hotel-details {
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    gap: 30px;
+    width: 80%;
+    text-align: right;
+}
+
+.hotel-price {
+    font-size: 1.2rem;
+    color: #007BFF;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.reserve-btn {
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 10px 20px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.reserve-btn:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background: #003366;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer-info, .footer-links, .footer-social, .footer-apps {
+    margin-bottom: 1.5rem;
+}
+
+.footer-info p, .footer-links ul li a, .footer-social .social-icon {
+    color: #fff;
+}
+
+.footer-info h3, .footer-links h3, .footer-social h3, .footer-apps h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer-links ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-social .social-icon {
+    margin: 0 0.5rem;
+}
+
+.footer-bottom {
+    background: #002244;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+}
+
+.search-container{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.search-box {
+    background-color: white;
+    border-radius: 8px;
+    margin-left: 20px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.search-box input[type="text"],
+.search-box input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.search-btn {
+    background-color: #007BFF;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+    font-size: 1.1rem;
+    padding: 12px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-btn:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 10px rgba(0, 91, 179, 0.4);
+}
+
+.search-btn:active {
+    background-color: #004494;
+    transform: scale(0.98);
+}
+
+.filters {
+    width: 100%;
+    max-width: 300px;
+    background-color: white;
+    height:10%;
+    padding: 25px;
+    margin-top: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow-y: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+.filters h2 {
+    font-size: 1.2rem;
+    color: #549ce6;
+    margin-top: 0;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+}
+
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: #666;
+    font-weight: 500;
+}
+
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    font-size: 1rem;
+
+}
+
+.form-group select:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+    outline: none;
+}
+
+
+.main-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 20px;
+
+
+}
+
+header::before {
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    transform: translate(-50%, -50%);
+}
+
+header::after {
+    top: 25%;
+    right: 25%;
+    width: 150px;
+    height: 150px;
+    transform: translate(-50%, -50%);
+}
+
+.nav-container {
+    background-color: #549ce6;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    top:0;
+    width:100%;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav-container ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+
+.nav-container ul li {
+    margin: 0;
+}
+
+.nav-container ul li a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #0b3867;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-container ul li a:hover {
+    color: white;
+}
