@@ -15,5 +15,18 @@ class HotelRepository extends ServiceEntityRepository
         parent::__construct($registry, Hotel::class);
     }
 
+    public function filterByHotelStandard(array $criteria){
+
+        $qb = $this->createQueryBuilder('h');
+
+        if (isset($criteria['type_object'])) {
+            $qb->andWhere('h.type_object = :type_object')
+                ->setParameter('type_object', $criteria['type_object']);
+        }
+
+        return $qb->getQuery()->getResult();
+
+    }
+
 
 }

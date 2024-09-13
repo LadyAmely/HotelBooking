@@ -263,18 +263,19 @@ footer {
 }
 
 .search-box {
-    background-color: white;
-    border-radius: 8px;
+    background: linear-gradient(135deg, #ffffff, #f9f9f9);
+    border-radius: 12px;
     margin-left: 20px;
     margin-top: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: 100%;
     max-width: 500px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
 }
+
 
 .search-box input[type="text"],
 .search-box input[type="date"] {
@@ -288,38 +289,40 @@ footer {
 .search-btn {
     background-color: #007BFF;
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
     color: white;
     cursor: pointer;
-    font-weight: 400;
+    font-weight: 500;
     letter-spacing: 0.5px;
     line-height: 1.4;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     padding: 12px;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .search-btn:hover {
     background-color: #0056b3;
-    box-shadow: 0 4px 10px rgba(0, 91, 179, 0.4);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 .search-btn:active {
     background-color: #004494;
-    transform: scale(0.98);
+    transform: scale(0.98) translateY(2px);
 }
+
 
 .filters {
     width: 100%;
     max-width: 300px;
-    background-color: white;
-    height:10%;
+    background: #ffffff;
     padding: 25px;
     margin-top: 20px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
     overflow-y: auto;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #ddd;
 }
 
 
@@ -340,20 +343,20 @@ footer {
 
 .form-group label {
     display: block;
-    font-size: 1rem;
+    font-size: 1.1rem;
     margin-bottom: 8px;
-    color: #666;
+    color: #333;
     font-weight: 500;
 }
 
 .form-group select {
     width: 100%;
-    padding: 12px 15px;
+    padding: 14px 18px;
     border: 1px solid #ddd;
     border-radius: 6px;
     background-color: #f9f9f9;
     font-size: 1rem;
-
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .form-group select:focus {
@@ -361,6 +364,7 @@ footer {
     box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
     outline: none;
 }
+
 
 
 .main-container{
