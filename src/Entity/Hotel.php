@@ -76,4 +76,53 @@ class Hotel
         $this->img_url = $img_url;
         return $this;
     }
+
+    #[ORM\Column(type: 'integer')]
+    private $stars;
+
+    public function getStars(): ?int{
+        return $this->stars;
+    }
+    public function setStars(?int $stars): self{
+        $this->stars = $stars;
+        return $this;
+    }
+
+    #[ORM\Column(type: 'text')]
+    private $city;
+
+    public function getCity(): ?string {
+        return $this->city;
+    }
+    public function setCity(string $city): self{
+        $this->city = $city;
+        return $this;
+
+    }
+
+    #[ORM\Column(type: 'text')]
+    private $country;
+
+    public function getCountry(): ?string{
+        return $this->country;
+    }
+
+    public function setCountry(string $country): self{
+        $this->country = $country;
+        return $this;
+    }
+
+    #[ORM\Column(type: 'text')]
+    private $type_object;
+
+    public function getTypeObject(): ?string{
+        return $this->type_object;
+    }
+    public function setTypeObject(string $type_object): self{
+
+        $this->type_object = $type_object;
+        return $this;
+    }
+
+
 }
